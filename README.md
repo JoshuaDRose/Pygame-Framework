@@ -21,7 +21,7 @@ setuptools.setup(
     },
     long_description=long_description,
     long_description_content_type="text/markdown",
-    install_requires=["PyYAML", "other_packages"],
+    install_requires=["PyYAML", "pytest"],
     url="https://github.com/gene1wood/projectname",
     packages=setuptools.find_packages(),
     classifiers=[
