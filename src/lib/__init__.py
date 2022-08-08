@@ -12,7 +12,7 @@ joshuarose099@gmail.com
 from .audio import Audio
 from .enemy import Enemy
 from .entity import Entity
-from .particle import Particle
+from .particle import Particle, Spark
 from .player import Player
 from .sprites import *
 from .text import *
