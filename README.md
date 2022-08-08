@@ -1,5 +1,5 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/kxrfa56bqsjppl1b/branch/master?svg=true)](https://ci.appveyor.com/project/JoshuaDRose/pygame-framework/branch/master)
-
+<!-- [![Build status](https://ci.appveyor.com/api/projects/status/kxrfa56bqsjppl1b/branch/master?svg=true)](https://ci.appveyor.com/project/JoshuaDRose/pygame-framework/branch/master)
+-->
 Readme.md is a required file
 __setup.py__
 ```python
