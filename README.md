@@ -1,5 +1,8 @@
 <!-- [![Build status](https://ci.appveyor.com/api/projects/status/kxrfa56bqsjppl1b/branch/master?svg=true)](https://ci.appveyor.com/project/JoshuaDRose/pygame-framework/branch/master)
 -->
+[![CI](https://github.com/JoshuaDRose/Pygame-Framework/actions/workflows/greetings.yml/badge.svg?branch=development)](https://github.com/JoshuaDRose/Pygame-Framework/actions/workflows/greetings.yml)
+
+
 Readme.md is a required file
 __setup.py__
 ```python
