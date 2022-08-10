@@ -104,7 +104,7 @@ class Particle():
         self.velocity = velocity
         self.alpha_value = alpha_value
 
-    def update, dt(self):
+    def update(self, dt):
         """ Updates all sprites in particle group """
         self.color.append(self.alpha_value)
         self.radius -= .3
