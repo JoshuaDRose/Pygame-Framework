@@ -36,6 +36,7 @@ class Game(lib.Window):
             'swoosh': os.path.join('data/sprites', 'swoosh.png'),
             'tiles': os.path.join('data/tiles', 'tiles.png')
         }
+        self.bg = pygame.image.load(os.path.join('data/sprites', 'bg.png')).convert()
         self.collision_sparks = []
         self.draw_sparks = False
         self.spark_cap = 5
@@ -46,13 +47,14 @@ class Game(lib.Window):
     def run(self):
         """ primary game sequence method """
         while not self.done:
-            self.display.fill((0,0,0))
+            self.display.blit(self.bg, (0,0))
             for index, spark in sorted(enumerate(self.sparks), reverse=True):
                 spark.update(1)
                 spark.draw(self.display)
                 if not spark.alive:
                     self.sparks.pop(index)
-
+            for index, particle in sorted(enumerate(self.particles), reverse=True):
+                particle.update
             mx, my = pygame.mouse.get_pos()
 
             for event in pygame.event.get():
@@ -90,8 +92,6 @@ class Game(lib.Window):
                     if self.particle_keys:
                         self.spark_cap =self.previous_cap
                         self.draw_sparks = False
-
-
             if self.draw_sparks:
                 if self.spark_cap == 0:
                     if self.do_gradient:
@@ -103,7 +103,7 @@ class Game(lib.Window):
                         self.sparks.append(lib.Spark([mx,my], math.radians(random.randint(0,360)), random.randint(3, 6), [250, 110, 0], random.randint(1,2)))
                     else:
                         self.sparks.append(lib.Spark([mx,my], math.radians(random.randint(0,360)), random.randint(3, 6), [255,255,255], random.randint(1,2)))
-
+            
             pygame.display.update()
             self.clock.tick(60)
         self.exit_window()
